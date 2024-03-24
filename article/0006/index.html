@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="浅风">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.qianf.fun/article/0006/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="前言最近发现一个Chrome的小Bug，设置里面的搜索功能只要一搜就崩溃…这又是怎么被发现的呢，是因为我前几天需要查空闲教室的时候发现Chrome突然登不上去学校教务处网站了…然后我怀疑是因为网页缓存的问题，结果一在设置在中搜索“缓存”，Chrome直接崩了…而登不上去的原因又是因为什么呢，是因为我输错了网址…总之很屑…自从发现这个崩溃Bug之后，我尝试了很多方法去阻止崩溃：下载Beta版、重启&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器扩展&amp;脚本大赏">
+<meta property="og:url" content="https://blog.qianf.fun/article/0006/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言最近发现一个Chrome的小Bug，设置里面的搜索功能只要一搜就崩溃…这又是怎么被发现的呢，是因为我前几天需要查空闲教室的时候发现Chrome突然登不上去学校教务处网站了…然后我怀疑是因为网页缓存的问题，结果一在设置在中搜索“缓存”，Chrome直接崩了…而登不上去的原因又是因为什么呢，是因为我输错了网址…总之很屑…自从发现这个崩溃Bug之后，我尝试了很多方法去阻止崩溃：下载Beta版、重启&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/ki2PFMW58bnDmsU.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/cgESuBoRMpzx2iv.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/nZtOzEaQ2JvB3Pp.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/wBVD2gvIZ3YkKNe.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/4Bm7zyPlMgQGwZ9.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/CLTr5Q9NEquPOda.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/wgBz2ZS96vEcYbr.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/cCFWMPzTjpvYKlA.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/rtKgxRnUAh6oEvf.png">
+<meta property="og:image" content="https://vip2.loli.io/2023/10/24/gR3HqFUlecDACON.png">
+<meta property="article:published_time" content="2023-10-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-25T00:00:00.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vip2.loli.io/2023/10/24/ki2PFMW58bnDmsU.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp">
+    <!--- Page Info-->
+    
+    <title>
+        
+            浏览器扩展&amp;脚本大赏 -
+        
+        QianF&#39;s Blog
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+        
+            
+    
+            
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        QianF&#39;s Blog
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.qianf.fun","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":false,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":false},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://cdn.sa.net/2024/03/23/JnOf2FeZQwsLEjk.webp","dark":"https://cdn.sa.net/2024/03/23/CSeErVzYA6MLjus.webp"},"title":"浅浅如风 盈盈如月","subtitle":{"text":["Loading..."],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":125,"backing_speed":80,"starting_delay":1000,"backing_delay":1500,"loop":false,"smart_backspace":false},"text_color":{"light":"#fff","dark":"#CBCBD1"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/Qian-F","instagram":null,"zhihu":null,"twitter":null,"email":"576765349@qq.com"},"qrs":{"weixin":"https://cdn.sa.net/2024/03/23/VluqFBUHZ2Nsz1S.png","qq":"https://cdn.sa.net/2024/03/23/NEnkWUwL4HmG9Rc.png"}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags/"},"Categories":{"icon":"fa-solid fa-folder","path":"/categories/"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"YYYY-MM-DD","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2021/9/1 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                QianF&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags/"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories/"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags/"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories/"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">浏览器扩展&amp;脚本大赏</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://cdn.sa.net/2024/03/23/CbOeMtc8HjqwrPx.webp">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">浅风</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-10-24</span>
+        <span class="mobile">2023-10-24</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-10-25</span>
+            <span class="mobile">2023-10-25</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近发现一个Chrome的小Bug，设置里面的搜索功能只要一搜就崩溃…这又是怎么被发现的呢，是因为我前几天需要查空闲教室的时候发现Chrome突然登不上去学校教务处网站了…然后我怀疑是因为网页缓存的问题，结果一在设置在中搜索“缓存”，Chrome直接崩了…而登不上去的原因又是因为什么呢，是因为我输错了网址…总之很屑…自从发现这个崩溃Bug之后，我尝试了很多方法去阻止崩溃：下载Beta版、重启&amp;重装Chrome、重启电脑等等等等，但是都没有用…所以，我开始尝试使用<strong>Edge</strong>，没错，就是那个臭名昭著的<strong>E D G E</strong>，顺便拥抱一下微软的生态，体验一下。</p>
+<p>为了避免以后还会出现这种情况，打算写一篇博客来记录一下我常用的浏览器的扩展程序和脚本（毕竟谷歌和微软只会同布你的扩展程序，里面的设置和脚本是一概不管啊）。</p>
+<h1 id="扩展程序"><a href="#扩展程序" class="headerlink" title="扩展程序"></a>扩展程序</h1><blockquote>
+<p>如果你在使用Chrome却无法访问Chrome的扩展商店，可以在<a class="link"   target="_blank" rel="noopener" href="https://www.crxsoso.com/" >这里</a>搜索下载。</p>
+<p>Chrome和Edge的扩展基本上都是通用的，所以说兼容性这一方面不需要考虑太多。</p>
+</blockquote>
+<h2 id="AdGuard-广告拦截器"><a href="#AdGuard-广告拦截器" class="headerlink" title="AdGuard 广告拦截器"></a>AdGuard 广告拦截器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/ki2PFMW58bnDmsU.png"
+                     
+                ></p>
+<p>浏览器广告可谓是很烦人的存在了，广告拦截器肯定是必不可少的一个。这款AdGuard我用着还蛮舒服，对广告的识别能力很强，基本上做到了沉浸式去广告（现在想想已经很长时间没有看到过广告了😁）。</p>
+<p>这个扩展在两家的扩展商店都能搜到，不过还是放个<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/pdffkfellgipmhklpdmokmckkkfcopbh" >链接</a>吧~</p>
+<h2 id="IDM-Integration-Module"><a href="#IDM-Integration-Module" class="headerlink" title="IDM Integration Module"></a>IDM Integration Module</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/cgESuBoRMpzx2iv.png"
+                     
+                ></p>
+<p>IDM的浏览器插件，可是IDM本体是要收费的，因此很多朋友并不会接触到这个扩展。但是能白嫖啊！这里给大家一个<a class="link"   target="_blank" rel="noopener" href="https://www.uy5.net/idm/" >神秘链接</a>，懂的都懂，点进去直接下载就能免费白嫖IDM了。下载安装好之后IDM会自动给你安装这个浏览器扩展来拦截浏览器的下载行为，享受多线程下载的快乐吧~</p>
+<h2 id="iTab新标签页"><a href="#iTab新标签页" class="headerlink" title="iTab新标签页"></a>iTab新标签页</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/nZtOzEaQ2JvB3Pp.png"
+                     
+                ></p>
+<p>可以自定义浏览器新标签页的扩展，比浏览器原生的新标签页强了不少，还支持云端同步和很多小组件（貌似还免费支持GPT，虽然说不太相信是原生的，估计是3.5或者更旧的模型，我没用过所以不做评价）。支持自定义的内容超多，<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E5%85%8D%E8%B4%B9chatgpt/inedkoakiaeepjoblbiiipedngonadhn" >墙裂推荐</a>。</p>
+<h2 id="暗色主题-Chrome的暗色阅读器"><a href="#暗色主题-Chrome的暗色阅读器" class="headerlink" title="暗色主题 - Chrome的暗色阅读器"></a>暗色主题 - Chrome的暗色阅读器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/wBVD2gvIZ3YkKNe.png"
+                     
+                ></p>
+<p>非常好用、适配性很强的<a class="link"   target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98-chrome%E7%9A%84%E6%9A%97%E8%89%B2%E9%98%85%E8%AF%BB%E5%99%A8/eckokfcjbjbgjifpcbdmengnabecdakp" >暗色模式扩展</a>，而且支持记忆不同网页的设置，这就让你可以很方便地自定义每个网站最适合的暗色主题。操作很舒服，动画也很流畅。总之该夸的都夸完了，用起来！偶对，虽然他说是Chrome的专属扩展，但是现在Edge也兼容Chrome的所有扩展了，所以我在Edge上也加上了这个扩展。</p>
+<h2 id="沉浸式翻译"><a href="#沉浸式翻译" class="headerlink" title="沉浸式翻译"></a>沉浸式翻译</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/4Bm7zyPlMgQGwZ9.png"
+                     
+                ></p>
+<p>国人开发的一款<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E5%8F%8C%E8%AF%AD%E5%AF%B9%E7%85%A7%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91-pdf%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91/amkbmndfnliijdhojkpoglbnaaahippg" >浏览器扩展</a>，可以显示中外对照翻译，对很多网页样式都有适配，在B站第一个视频发布的时候就关注了，后续发展到现在已经很成熟可以很方便地使用，另一个我在用的小众<a class="link"   target="_blank" rel="noopener" href="https://pot-app.com/" >划词翻译</a>也是在B站发现的。有一些免费的翻译源可以选择，也可以使用腾讯阿里GPT，自定义的选择很多，甚至可以自定义翻译出的文本样式。</p>
+<h2 id="篡改猴"><a href="#篡改猴" class="headerlink" title="篡改猴"></a>篡改猴</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/CLTr5Q9NEquPOda.png"
+                     
+                ></p>
+<p>顾名思义，<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd" >这款扩展</a>可以安装各种类型的脚本来篡改你在浏览器网页中看到的所有内容，支持自定义。不过我还是推荐使用大佬开发的各种脚本来便利自己的上网体验。多说无益，接下来将介绍一些非常有用的脚本来帮助大家上网冲浪👇。</p>
+<h1 id="篡改猴脚本集合"><a href="#篡改猴脚本集合" class="headerlink" title="篡改猴脚本集合"></a>篡改猴脚本集合</h1><blockquote>
+<p>这些脚本的便利性不亚于前面的扩展程序！快上车👉</p>
+</blockquote>
+<h2 id="网盘直链下载助手"><a href="#网盘直链下载助手" class="headerlink" title="网盘直链下载助手"></a>网盘直链下载助手</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/wgBz2ZS96vEcYbr.png"
+                     
+                ></p>
+<p>一个免费开源的<a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/install.html" >网盘下载助手</a>，使用网盘开放平台的API获取文件的真实下载地址实现多线程高效下载。一些不限速但是要求你下载客户端的网盘就可以直接在网页端实现高速下载，避免被捆绑客户端。不过那些限速网盘还是推荐购买VIP来下载，因为该限速还是会限速。而关于百度网盘非会员下载限速的问题，这就不得不给大家一个<a class="link"   target="_blank" rel="noopener" href="https://api.94speed.com/" >神秘链接</a>了~</p>
+<h2 id="网盘智能识别助手"><a href="#网盘智能识别助手" class="headerlink" title="网盘智能识别助手"></a>网盘智能识别助手</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/cCFWMPzTjpvYKlA.png"
+                     
+                ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/tool/install-panai.html" >智能识别</a>选中文字里的“网盘链接”和“提取码”，提示并帮你自动帮你填写提取码。对于一些资源分享帖或者阿B里面博主在简介分享的链接，只需要轻轻一划，点个按钮，就可以轻松抵达网盘地址，简直不要太爽😘。</p>
+<h2 id="网页加速器"><a href="#网页加速器" class="headerlink" title="网页加速器"></a>网页加速器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/rtKgxRnUAh6oEvf.png"
+                     
+                ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/tool/install-instantpage.html" >加速</a>网页中的超链接，让您打开网页的速度提升60%。速度提升效果明显，十分推荐。</p>
+<h2 id="Bilibili-Evolved"><a href="#Bilibili-Evolved" class="headerlink" title="Bilibili-Evolved"></a>Bilibili-Evolved</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://vip2.loli.io/2023/10/24/gR3HqFUlecDACON.png"
+                     
+                ></p>
+<p>未完待续。。。（想打游戏了，开摆）</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 浏览器扩展&amp;脚本大赏</li>
+        <li><strong>作者:</strong> 浅风</li>
+        <li><strong>创建于
+                :</strong> 2023-10-24 00:00:00</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2023-10-25 00:00:00
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://blog.qianf.fun/article/0006/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/article/0005/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">什么是好的人际关系</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://waline.qianf.fun',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">浏览器扩展&amp;脚本大赏</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F"><span class="nav-text">扩展程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AdGuard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">AdGuard 广告拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDM-Integration-Module"><span class="nav-text">IDM Integration Module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iTab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="nav-text">iTab新标签页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98-Chrome%E7%9A%84%E6%9A%97%E8%89%B2%E9%98%85%E8%AF%BB%E5%99%A8"><span class="nav-text">暗色主题 - Chrome的暗色阅读器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="nav-text">沉浸式翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4"><span class="nav-text">篡改猴</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E9%9B%86%E5%90%88"><span class="nav-text">篡改猴脚本集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘直链下载助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘智能识别助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="nav-text">网页加速器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bilibili-Evolved"><span class="nav-text">Bilibili-Evolved</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">浅风</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 6 篇文章
+                    </span>
+                    
+                        <span>
+                            共 5.1k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    https://beian.miit.gov.cn
+                
+                ">晋ICP备2024032338号</a></div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+            
+                
+        
+                
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="right-bottom-tools rss flex justify-center items-center">
+                <a class="flex justify-center items-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                <i class="fa-regular fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
