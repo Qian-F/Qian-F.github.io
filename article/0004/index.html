@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="浅风">
+    
+    <title>
+        
+            浏览器扩展&amp;脚本大赏 |
+        
+        浅风的部落格
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/font/css/brands.min.css">
+    
+        
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/fonts.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"blog.qianf.fun","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"浅风的部落格","author":"浅风","avatar":"https://cdn.sa.net/2024/03/23/CbOeMtc8HjqwrPx.webp","logo":"https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp","favicon":"https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp"},"menu":{"home":"/","archives":"/archives","links":"/links","tools":"/tools"},"first_screen":{"enable":true,"background_img":"/images/bg2.svg","background_img_dark":"/images/bg2.svg","description":"浅浅如风 盈盈如月","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Qian-F","weixin":"img | https://cdn.sa.net/2024/04/02/cEoJfmFinYUzCGl.jpg","qq":"img | https://cdn.sa.net/2024/04/02/YRIfHjNwlZ1GaEM.jpg","weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"576765349@qq.com"}},"scroll":{"progress_bar":true,"percent":false,"hide_header":false},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated","post_datetime_format":"YYYY年MM月DD日"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":true,"min2read":false},"datetime_format":"YYYY年MM月DD日","copyright_info":true,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":"https://waline.qianf.fun","reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2021,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]},"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":[null,"/css/custom.css","/css/fonts.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"朋友们 1"},{"name":"XPoet","link":"https://xpoet.cn/","description":"懒惰是程序员第一生产力","avatar":"https://cdn.statically.io/gh/XPoet/image-hosting@master/common-use/avatar.jpg"},{"name":"不知名艺术家","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},"......","......","......"],"tools":[{"category":"常用网址"},{"name":"克隆窝","link":"https://www.123pan.com/","description":"软件应用分享汇聚地","image":"https://cdn.sa.net/2024/04/05/9qgwVkf1tcsJIYN.png"},{"name":"安哥技术博客","link":"https://chenjunan.top/","description":"各类应用软件破解","image":"https://cdn.sa.net/2024/04/05/hvgn4FXtsI2KGZ7.png"},{"name":"果核剥壳","link":"https://www.ghxi.com/","description":"软件应用系统分享区","image":"https://cdn.sa.net/2024/04/05/TO19WnuRcxPifkg.png"},{"name":"SM.MS","link":"https://sm.ms/","description":"优秀的个人图床","image":"https://cdn.sa.net/2024/04/05/iwQu3l7NzJvBqpg.png"},{"name":"MCVersions.net","link":"https://mcversions.net/","description":"全版本 MC 存档站","image":"https://cdn.sa.net/2024/04/05/xfvNAORmwnl5Gtb.png"},{"name":"I Love PDF","link":"https://www.ilovepdf.com/","description":"PDF爱好者的在线工具","image":"https://cdn.sa.net/2024/04/05/cVv7d8UzMxgleOr.png"},{"name":"I Love IMG","link":"https://www.iloveimg.com/","description":"完全免费在线图片编辑器","image":"https://cdn.sa.net/2024/04/05/tUaT2m5v6MwkLGX.png"},{"name":"MuseTransfer","link":"https://musetransfer.com/","description":"简洁好用的高速传输服务","image":"https://cdn.sa.net/2024/04/06/aPFEYlxnM35WL4A.png"},{"name":"Apkpure","link":"https://apkpure.com/","description":"APK 较全的下载平台","image":"https://cdn.sa.net/2024/04/06/g64CZPAMFpVzQas.png"},{"name":"RSSHub","link":"https://docs.rsshub.app/","description":"万物皆可 RSS","image":"https://cdn.sa.net/2024/04/06/gqXQS6CVdDaUR1I.png"},{"name":"NEAL.FUN","link":"https://neal.fun/","description":"风靡全球的小游戏网站","image":"https://cdn.sa.net/2024/04/06/hedi1WAuYb9VpxL.png"},{"name":"避风港数字权益","link":"http://by.onafix.cn/","description":"会员代充/借租账号平台","image":"https://cdn.sa.net/2024/04/06/e9zqfS2sUb1V53c.png"},{"name":"Microsoft 365 E5 Renew Plus","link":"https://e5renew.com/","description":"微软 E5 开发者订阅续订软件","image":"https://cdn.sa.net/2024/04/06/91w5BnA2rNWTkOc.png"},{"name":"博思白板","link":"https://boardmix.cn/","description":"适合团队高效配合使用的 AI 白板","image":"https://cdn.sa.net/2024/04/06/mx6cbM7uEgVnsPv.png"},{"name":"新视觉影院","link":"https://www.80kk.app/","description":"追剧看电影神器","image":"https://cdn.sa.net/2024/04/06/cFuqy1QnbePwVjG.png"},{"name":"RapidTables","link":"https://www.rapidtables.com/","description":"一系列在线计算器和工具","image":"https://cdn.sa.net/2024/04/06/elqPBTjszcSb6v4.png"},{"name":"iP属地查询","link":"https://www.ipshudi.com/","description":"查询 IPV4/IPV6 归属地","image":"https://cdn.sa.net/2024/04/06/sncmu5dVZbfAqge.png"},{"name":"Fotor","link":"https://www.fotor.com/","description":"在线剪辑工作站","image":"https://cdn.sa.net/2024/04/06/yzNg2aRJWOLphsX.png"},{"name":"EpochConverter","link":"https://www.epochconverter.com/","description":"Epoch & Unix 时间戳转换工具","image":"https://cdn.sa.net/2024/04/06/wTd7c3h5FDB1gVH.png"},{"name":"各类账号购买平台","link":"https://www.gugeceo.com/","description":"提供大部分所需账号购买渠道","image":"https://cdn.sa.net/2024/04/06/64QdShBVkJexCZr.png"},{"name":"transfonter","link":"https://transfonter.org/","description":"转换各类不同格式的字体","image":"https://cdn.sa.net/2024/04/06/zFwqZtmeTSL2O9c.png"},{"name":"老鱼简历","link":"https://www.laoyujianli.com/","description":"个人简历制作网站","image":"https://cdn.sa.net/2024/04/06/eNGstvTUK4p7nm8.png"},{"name":"Moddermore","link":"https://moddermore.net/","description":"模组列表/整合包分享平台","image":"https://cdn.sa.net/2024/04/06/76JAzMpP9Cwtv3s.png"},{"name":"mclo.gs","link":"https://mclo.gs/","description":"便捷分享 MC 日志工具","image":"https://cdn.sa.net/2024/04/06/Hoja4ftUL5JVhWO.png"},{"name":"MineBBS 论坛","link":"https://www.minebbs.com/","description":"国内最大的中文论坛","image":"https://cdn.sa.net/2024/04/06/HypFmdM8w7TqDRk.png"},{"name":"力扣","link":"https://leetcode.cn/","description":"算法题库刷题平台","image":"https://cdn.sa.net/2024/04/06/8V4M2o76GnXwlJx.png"},{"name":"labuladong 的算法笔记","link":"https://labuladong.online/algo/","description":"算法刷题小助手","image":"https://cdn.sa.net/2024/04/06/Ex8TDIyJnhOp4jR.png"},{"name":"MC 百科","link":"https://www.mcmod.cn/","description":"最大的 MC 中文 MOD 平台","image":"https://cdn.sa.net/2024/04/06/MWTGaXB8RfNmFQ9.png"},{"name":"Bilibili","link":"https://www.bilibili.com/","description":"知名视频网站","image":"https://cdn.sa.net/2024/04/06/36rt9shnjcHS8OY.png"},{"name":"Github","link":"https://github.com/","description":"全球最大的代码托管平台","image":"https://cdn.sa.net/2024/04/06/Zq6bgP4JT7v9myK.png"},{"name":"阿水 AI","link":"https://ashuiai.com/","description":"相对良心的 AI 对话平台","image":"https://cdn.sa.net/2024/04/06/Gg1tQpHYh5VnkZo.png"},{"name":"轻略应用","link":"https://gonglue.qinggl.com/","description":"在线工具整合","image":"https://cdn.sa.net/2024/04/06/7epBhOkKXwECAPq.png"},{"category":"常用 PC 软件"},{"name":"123 云盘","link":"https://www.123pan.com/","description":"超大容量不限速网盘","image":"https://cdn.sa.net/2024/04/05/HbB6S82js3pAEfG.png"},{"name":"7-ZIP","link":"https://www.7-zip.org/","description":"优秀的文件压缩工具","image":"https://cdn.sa.net/2024/04/05/j9I4osHTyzhGqAN.png"},{"name":"AnLink","link":"https://anl.ink/","description":"实用高效的手机投屏工具","image":"https://cdn.sa.net/2024/04/05/SehLZ2PBJ6tEMTK.png"},{"name":"Badlion Client","link":"https://client.badlion.net/","description":"最好用的 MC-PVP 客户端","image":"https://cdn.sa.net/2024/04/05/LAJNs1rKSoRpx27.png"},{"name":"Clash Verge","link":"https://clashverge.net/","description":"高效的基于规则的 VPN 客户端","image":"https://cdn.sa.net/2024/04/05/dXJYBkLKSVcNPMh.png"},{"name":"Discord","link":"https://discord.com/","description":"最流行的社区聚集地","image":"https://cdn.sa.net/2024/04/05/Qi5GPfLmnxBKdWl.png"},{"name":"Adoptium OpenJDK","link":"https://adoptium.net/","description":"高性能 JDK 发行版","image":"https://cdn.sa.net/2024/04/05/71PrlLtDA6zRTsI.png"},{"name":"Equalizer APO","link":"https://sourceforge.net/projects/equalizerapo/","description":"非常好用的声音均衡器","image":"https://cdn.sa.net/2024/04/05/DK3uL297vQeInWb.png"},{"name":"Everything","link":"https://www.voidtools.com/","description":"基于名称快速定位文件和文件夹","image":"https://cdn.sa.net/2024/04/05/VLc7v81ORkh9C3W.png"},{"name":"EverythingToolbar","link":"https://github.com/srwi/EverythingToolbar","description":"任务栏即时文件搜索集成","image":"https://cdn.sa.net/2024/04/05/xLuHayXr9WUJdGt.png"},{"name":"Git","link":"https://git-scm.com/","description":"免费开源的分布式版本控制系统","image":"https://cdn.sa.net/2024/04/05/t1Y3kOTXN9fRePi.png"},{"name":"虎牙极速版","link":"https://www.huya.com/","description":"简洁的虎牙直播观看平台","image":"https://cdn.sa.net/2024/04/05/mEGPSgV5yo1ZfTk.png"},{"name":"ImageGlass","link":"https://imageglass.org/","description":"轻量&丰富的图像查看器","image":"https://cdn.sa.net/2024/04/05/DhXm5v689GLHFcA.png"},{"name":"IObit Unlocker","link":"https://www.iobit.com/en/iobit-unlocker.php","description":"文件占用解锁神器","image":"https://cdn.sa.net/2024/04/05/KNZuTX34sFHz9yn.png"},{"name":"iSlide","link":"https://www.islide.cc/","description":"基于 PPT 的插件工具","image":"https://cdn.sa.net/2024/04/05/lWLg53QtqkiBFuj.png"},{"name":"Visual Studio Code","link":"https://code.visualstudio.com/","description":"高性能的代码编辑器","image":"https://cdn.sa.net/2024/04/05/nagO4ZvcbtTJl5C.png"},{"name":"Node.js","link":"https://nodejs.org/","description":"免费开源跨平台的 JavaScript 运行环境","image":"https://cdn.sa.net/2024/04/05/1NfaQPOvU6XuEYD.png"},{"name":"OBS Studio","link":"https://obsproject.com/","description":"视频录制和直播的免费开源软件","image":"https://cdn.sa.net/2024/04/05/oRab95mVHOkSn6h.png"},{"name":"Obsidian","link":"https://obsidian.md/","description":"私密且灵活的写作应用","image":"https://cdn.sa.net/2024/04/05/8p9Otqklsbf1g23.png"},{"name":"PicGo","link":"https://github.com/Molunerfinn/PicGo","description":"用于快速上传图片的工具","image":"https://cdn.sa.net/2024/04/05/rZXt1OJRomazVgK.png"},{"name":"PixPin","link":"https://pixpinapp.com/","description":"功能强大使用简单的截图/贴图工具","image":"https://cdn.sa.net/2024/04/05/45QaOix2qRdvYTm.png"},{"name":"Pot","link":"https://pot-app.com/","description":"跨平台划词翻译和OCR","image":"https://cdn.sa.net/2024/04/05/vYIfV6Zc2xowmt3.png"},{"name":"Pot Player","link":"https://potplayer.info/","description":"免费的多媒体播放器","image":"https://cdn.sa.net/2024/04/05/US7K4jlzXu3HCcM.png"},{"name":"QQ","link":"https://im.qq.com/pcqq/index.shtml","description":"全新架构的 PC 版 QQ","image":"https://cdn.sa.net/2024/04/05/9MPVaX1vmY3cfFb.png"},{"name":"SakuraFrp 启动器","link":"https://www.natfrp.com/","description":"简洁好用的 SakuraFrp 启动器","image":"https://cdn.sa.net/2024/04/05/61v47F2iKTqVkAl.png"},{"name":"Sourcetree","link":"https://www.sourcetreeapp.com/","description":"多功能的 Git 客户端","image":"https://cdn.sa.net/2024/04/05/pUmCWTvSNjt3aqb.png"},{"name":"Steam","link":"https://store.steampowered.com/","description":"优秀的游戏社区","image":"https://cdn.sa.net/2024/04/05/im6xXEvzwMQt95W.png"},{"name":"Telegram Desktop","link":"https://desktop.telegram.org/","description":"快速安全的 Telegram 桌面应用程序","image":"https://cdn.sa.net/2024/04/05/rFIPCW4ujDkaXgA.png"},{"name":"typora","link":"https://typora.io/","description":"一个 Markdown 编辑器/阅读器","image":"https://cdn.sa.net/2024/04/05/S1COLwi4dRZbeyo.png"},{"name":"Watt Toolkit","link":"https://steampp.net/","description":"开源跨平台的多功能工具箱","image":"https://cdn.sa.net/2024/04/05/8ir2TzBCJu13Zoq.png"},{"name":"Xshell","link":"https://www.netsarang.com/en/xshell/","description":"行业中最强大的 SSH 客户端","image":"https://cdn.sa.net/2024/04/05/mjP8OclVr2J4CeX.png"},{"name":"Zoom","link":"https://zoom.us/","description":"一个实现无限制人际联系的平台","image":"https://cdn.sa.net/2024/04/05/uYt69cLvXiga5IU.png"},{"name":"阿里云盘","link":"https://www.alipan.com/","description":"较为良心的个人网盘","image":"https://cdn.sa.net/2024/04/05/wcTXpgYI5hePS3j.png"},{"name":"百度网盘","link":"https://pan.baidu.com/","description":"非常不良心的个人网盘","image":"https://cdn.sa.net/2024/04/05/DQN9rdSRy5VZCvO.png"},{"name":"抖音","link":"https://www.douyin.com/","description":"国内最大的短视频平台","image":"https://cdn.sa.net/2024/04/05/KkZYqX5WT74yjQH.png"},{"name":"火绒安全","link":"https://www.huorong.cn/","description":"干净轻巧的杀毒/防护软件","image":"https://cdn.sa.net/2024/04/05/IitWxDgV1Evk5SG.png"},{"name":"腾讯会议","link":"https://meeting.tencent.com/","description":"国内成熟的云端会议解决方案","image":"https://cdn.sa.net/2024/04/05/eiKxy9IzJQO6q3B.png"},{"name":"腾讯文档","link":"https://docs.qq.com/","description":"可协作编辑的云端效率工具","image":"https://cdn.sa.net/2024/04/05/iuhEvkAlf2UjYmZ.png"},{"name":"网易云音乐","link":"https://music.163.com/","description":"专注于发现与分享的音乐产品","image":"https://cdn.sa.net/2024/04/05/7WhIZMafjXbmzlo.png"},{"name":"微信","link":"https://weixin.qq.com/","description":"一款跨平台的通讯工具","image":"https://cdn.sa.net/2024/04/05/J94CH7cdwxmuGWZ.png"},{"name":"贝锐向日葵","link":"https://sunlogin.oray.com/","description":"实用的远程控制软件","image":"https://cdn.sa.net/2024/04/05/hCHFxIVTjzlomKq.png"},{"category":"常用安卓软件"},{"name":"123 云盘","link":"https://sj.qq.com/appdetail/com.mfcloudcalculate.networkdisk","description":"优秀的网盘储存安全平台","image":"https://cdn.sa.net/2024/04/05/RX4Y9o2pHtxhunJ.png"},{"name":"5EPlay","link":"https://sj.qq.com/appdetail/com.fiveplay","description":"各类电竞游戏资讯社区","image":"https://cdn.sa.net/2024/04/05/acNLey2m8RdW97s.png"},{"name":"阿柴记账","link":"https://sj.qq.com/appdetail/com.android.miaoa.achai","description":"清爽可爱的专业记账软件","image":"https://cdn.sa.net/2024/04/05/TcoRQjCFDlK2tpk.png"},{"name":"阿里云","link":"https://sj.qq.com/appdetail/com.alibaba.aliyun","description":"阿里云手机管理应用","image":"https://cdn.sa.net/2024/04/05/TWlaxD91BYR67EN.png"},{"name":"阿里云盘","link":"https://sj.qq.com/appdetail/com.alicloud.databox","description":"较为优秀的个人网盘","image":"https://cdn.sa.net/2024/04/05/lPAn6IHgKTzZyRd.png"}]},"version":"4.1.2"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="浅风的部落格" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="https://cdn.sa.net/2024/03/23/7FWPLVKiYQTlzyt.webp">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               浅风的部落格
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                
+                                友链
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tools"
+                            >
+                                
+                                工具
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links"
+                    >友链</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tools"
+                    >工具</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        浏览器扩展&amp;脚本大赏
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="https://cdn.sa.net/2024/03/23/CbOeMtc8HjqwrPx.webp">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">浅风</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023年10月24日</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Oct 25 2023 00:00:00 GMT+0000">2023年10月25日</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.4k 字</span>
+            </span>
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近发现一个Chrome的小Bug，设置里面的搜索功能只要一搜就崩溃…这又是怎么被发现的呢，是因为我前几天需要查空闲教室的时候发现Chrome突然登不上去学校教务处网站了…然后我怀疑是因为网页缓存的问题，结果一在设置在中搜索“缓存”，Chrome直接崩了…而登不上去的原因又是因为什么呢，是因为我输错了网址…总之很屑…自从发现这个崩溃Bug之后，我尝试了很多方法去阻止崩溃：下载Beta版、重启&amp;重装Chrome、重启电脑等等等等，但是都没有用…所以，我开始尝试使用<strong>Edge</strong>，没错，就是那个臭名昭著的<strong>E D G E</strong>，顺便拥抱一下微软的生态，体验一下。</p>
+<p>为了避免以后还会出现这种情况，打算写一篇博客来记录一下我常用的浏览器的扩展程序和脚本（毕竟谷歌和微软只会同布你的扩展程序，里面的设置和脚本是一概不管啊）。</p>
+<h1 id="扩展程序"><a href="#扩展程序" class="headerlink" title="扩展程序"></a>扩展程序</h1><blockquote>
+<p>如果你在使用Chrome却无法访问Chrome的扩展商店，可以在<a class="link"   target="_blank" rel="noopener" href="https://www.crxsoso.com/" >这里<i class="fas fa-external-link-alt"></i></a>搜索下载。</p>
+<p>Chrome和Edge的扩展基本上都是通用的，所以说兼容性这一方面不需要考虑太多。</p>
+</blockquote>
+<h2 id="AdGuard-广告拦截器"><a href="#AdGuard-广告拦截器" class="headerlink" title="AdGuard 广告拦截器"></a>AdGuard 广告拦截器</h2><p><img   src="https://vip2.loli.io/2023/10/24/ki2PFMW58bnDmsU.png" ></p>
+<p>浏览器广告可谓是很烦人的存在了，广告拦截器肯定是必不可少的一个。这款AdGuard我用着还蛮舒服，对广告的识别能力很强，基本上做到了沉浸式去广告（现在想想已经很长时间没有看到过广告了😁）。</p>
+<p>这个扩展在两家的扩展商店都能搜到，不过还是放个<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/pdffkfellgipmhklpdmokmckkkfcopbh" >链接<i class="fas fa-external-link-alt"></i></a>吧~</p>
+<h2 id="IDM-Integration-Module"><a href="#IDM-Integration-Module" class="headerlink" title="IDM Integration Module"></a>IDM Integration Module</h2><p><img   src="https://vip2.loli.io/2023/10/24/cgESuBoRMpzx2iv.png" ></p>
+<p>IDM的浏览器插件，可是IDM本体是要收费的，因此很多朋友并不会接触到这个扩展。但是能白嫖啊！这里给大家一个<a class="link"   target="_blank" rel="noopener" href="https://www.uy5.net/idm/" >神秘链接<i class="fas fa-external-link-alt"></i></a>，懂的都懂，点进去直接下载就能免费白嫖IDM了。下载安装好之后IDM会自动给你安装这个浏览器扩展来拦截浏览器的下载行为，享受多线程下载的快乐吧~</p>
+<h2 id="iTab新标签页"><a href="#iTab新标签页" class="headerlink" title="iTab新标签页"></a>iTab新标签页</h2><p><img   src="https://vip2.loli.io/2023/10/24/nZtOzEaQ2JvB3Pp.png" ></p>
+<p>可以自定义浏览器新标签页的扩展，比浏览器原生的新标签页强了不少，还支持云端同步和很多小组件（貌似还免费支持GPT，虽然说不太相信是原生的，估计是3.5或者更旧的模型，我没用过所以不做评价）。支持自定义的内容超多，<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E5%85%8D%E8%B4%B9chatgpt/inedkoakiaeepjoblbiiipedngonadhn" >墙裂推荐<i class="fas fa-external-link-alt"></i></a>。</p>
+<h2 id="暗色主题-Chrome的暗色阅读器"><a href="#暗色主题-Chrome的暗色阅读器" class="headerlink" title="暗色主题 - Chrome的暗色阅读器"></a>暗色主题 - Chrome的暗色阅读器</h2><p><img   src="https://vip2.loli.io/2023/10/24/wBVD2gvIZ3YkKNe.png" ></p>
+<p>非常好用、适配性很强的<a class="link"   target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98-chrome%E7%9A%84%E6%9A%97%E8%89%B2%E9%98%85%E8%AF%BB%E5%99%A8/eckokfcjbjbgjifpcbdmengnabecdakp" >暗色模式扩展<i class="fas fa-external-link-alt"></i></a>，而且支持记忆不同网页的设置，这就让你可以很方便地自定义每个网站最适合的暗色主题。操作很舒服，动画也很流畅。总之该夸的都夸完了，用起来！偶对，虽然他说是Chrome的专属扩展，但是现在Edge也兼容Chrome的所有扩展了，所以我在Edge上也加上了这个扩展。</p>
+<h2 id="沉浸式翻译"><a href="#沉浸式翻译" class="headerlink" title="沉浸式翻译"></a>沉浸式翻译</h2><p><img   src="https://vip2.loli.io/2023/10/24/4Bm7zyPlMgQGwZ9.png" ></p>
+<p>国人开发的一款<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E5%8F%8C%E8%AF%AD%E5%AF%B9%E7%85%A7%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91-pdf%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91/amkbmndfnliijdhojkpoglbnaaahippg" >浏览器扩展<i class="fas fa-external-link-alt"></i></a>，可以显示中外对照翻译，对很多网页样式都有适配，在B站第一个视频发布的时候就关注了，后续发展到现在已经很成熟可以很方便地使用，另一个我在用的小众<a class="link"   target="_blank" rel="noopener" href="https://pot-app.com/" >划词翻译<i class="fas fa-external-link-alt"></i></a>也是在B站发现的。有一些免费的翻译源可以选择，也可以使用腾讯阿里GPT，自定义的选择很多，甚至可以自定义翻译出的文本样式。</p>
+<h2 id="篡改猴"><a href="#篡改猴" class="headerlink" title="篡改猴"></a>篡改猴</h2><p><img   src="https://vip2.loli.io/2023/10/24/CLTr5Q9NEquPOda.png" ></p>
+<p>顾名思义，<a class="link"   target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd" >这款扩展<i class="fas fa-external-link-alt"></i></a>可以安装各种类型的脚本来篡改你在浏览器网页中看到的所有内容，支持自定义。不过我还是推荐使用大佬开发的各种脚本来便利自己的上网体验。多说无益，接下来将介绍一些非常有用的脚本来帮助大家上网冲浪👇。</p>
+<h1 id="篡改猴脚本集合"><a href="#篡改猴脚本集合" class="headerlink" title="篡改猴脚本集合"></a>篡改猴脚本集合</h1><blockquote>
+<p>这些脚本的便利性不亚于前面的扩展程序！快上车👉</p>
+</blockquote>
+<h2 id="网盘直链下载助手"><a href="#网盘直链下载助手" class="headerlink" title="网盘直链下载助手"></a>网盘直链下载助手</h2><p><img   src="https://vip2.loli.io/2023/10/24/wgBz2ZS96vEcYbr.png" ></p>
+<p>一个免费开源的<a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/install.html" >网盘下载助手<i class="fas fa-external-link-alt"></i></a>，使用网盘开放平台的API获取文件的真实下载地址实现多线程高效下载。一些不限速但是要求你下载客户端的网盘就可以直接在网页端实现高速下载，避免被捆绑客户端。不过那些限速网盘还是推荐购买VIP来下载，因为该限速还是会限速。而关于百度网盘非会员下载限速的问题，这就不得不给大家一个<a class="link"   target="_blank" rel="noopener" href="https://api.94speed.com/" >神秘链接<i class="fas fa-external-link-alt"></i></a>了~</p>
+<h2 id="网盘智能识别助手"><a href="#网盘智能识别助手" class="headerlink" title="网盘智能识别助手"></a>网盘智能识别助手</h2><p><img   src="https://vip2.loli.io/2023/10/24/cCFWMPzTjpvYKlA.png" ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/tool/install-panai.html" >智能识别<i class="fas fa-external-link-alt"></i></a>选中文字里的“网盘链接”和“提取码”，提示并帮你自动帮你填写提取码。对于一些资源分享帖或者阿B里面博主在简介分享的链接，只需要轻轻一划，点个按钮，就可以轻松抵达网盘地址，简直不要太爽😘。</p>
+<h2 id="网页加速器"><a href="#网页加速器" class="headerlink" title="网页加速器"></a>网页加速器</h2><p><img   src="https://vip2.loli.io/2023/10/24/rtKgxRnUAh6oEvf.png" ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.youxiaohou.com/tool/install-instantpage.html" >加速<i class="fas fa-external-link-alt"></i></a>网页中的超链接，让您打开网页的速度提升60%。速度提升效果明显，十分推荐。</p>
+<h2 id="Bilibili-Evolved"><a href="#Bilibili-Evolved" class="headerlink" title="Bilibili-Evolved"></a>Bilibili-Evolved</h2><p><img   src="https://cdn.sa.net/2024/04/14/dQUikwtXqKnANoW.png" ></p>
+<p>未完待续。。。（想打游戏了，开摆）</p>
+
+                </div>
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                浏览器扩展&amp;脚本大赏
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                article/0004/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">浅风</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-10-24 00:00</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/article/0003/"
+                                   title="MC联机教程"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">MC联机教程</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="waline-comment-container">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline-meta.css"/>
+        <div id="waline-comment"></div>
+        <script data-pjax>
+          window.KeepCommentPlugin.walineOptions = JSON.parse('{}'.replace(/&#34;/g, '"'))
+          window.KeepCommentPlugin.walineOptions.el = '#waline-comment'
+          window.KeepCommentPlugin.walineOptions.comment = '.post-comments-count'
+          window.KeepCommentPlugin.walineOptions.serverURL = 'https://waline.qianf.fun'
+          window.KeepCommentPlugin.walineOptions.lang = 'zh-CN' || 'zh-CN'
+          window.KeepCommentPlugin.walineOptions.reaction = 'false' === 'true'
+        </script>
+
+        
+            <script data-pjax
+                    src="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"
+                    async
+                    onerror="window.KeepCommentPlugin.loadFailHandle()"
+            ></script>
+            <script data-pjax
+                    async
+            >
+              window.KeepCommentPlugin.initWaline = () => {
+                if (window?.Waline) {
+                  window.Waline.init(window.KeepCommentPlugin.walineOptions)
+                  window.KeepCommentPlugin.hideLoading()
+                } else {
+                  setTimeout(() => {
+                    window.KeepCommentPlugin.initWaline()
+                  }, 1000)
+                }
+              }
+
+              if ('true' === 'true') {
+                setTimeout(() => {
+                  window.KeepCommentPlugin.initWaline()
+                }, 1200)
+              } else {
+                window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initWaline)
+              }
+            </script>
+        
+
+        
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F"><span class="nav-text">扩展程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AdGuard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">AdGuard 广告拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDM-Integration-Module"><span class="nav-text">IDM Integration Module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iTab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="nav-text">iTab新标签页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98-Chrome%E7%9A%84%E6%9A%97%E8%89%B2%E9%98%85%E8%AF%BB%E5%99%A8"><span class="nav-text">暗色主题 - Chrome的暗色阅读器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="nav-text">沉浸式翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4"><span class="nav-text">篡改猴</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E9%9B%86%E5%90%88"><span class="nav-text">篡改猴脚本集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘直链下载助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘智能识别助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="nav-text">网页加速器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bilibili-Evolved"><span class="nav-text">Bilibili-Evolved</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2021</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">浅风</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    <div class="count-info info-item">
+        
+            <span class="count-item border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">4.7k</span>
+                </span>
+        
+
+        
+            <span class="count-item border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+        
+
+        
+            <span class="count-item border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+        
+    </div>
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F"><span class="nav-text">扩展程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AdGuard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="nav-text">AdGuard 广告拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDM-Integration-Module"><span class="nav-text">IDM Integration Module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iTab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="nav-text">iTab新标签页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98-Chrome%E7%9A%84%E6%9A%97%E8%89%B2%E9%98%85%E8%AF%BB%E5%99%A8"><span class="nav-text">暗色主题 - Chrome的暗色阅读器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="nav-text">沉浸式翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4"><span class="nav-text">篡改猴</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E9%9B%86%E5%90%88"><span class="nav-text">篡改猴脚本集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘直链下载助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%9B%98%E6%99%BA%E8%83%BD%E8%AF%86%E5%88%AB%E5%8A%A9%E6%89%8B"><span class="nav-text">网盘智能识别助手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%8A%A0%E9%80%9F%E5%99%A8"><span class="nav-text">网页加速器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bilibili-Evolved"><span class="nav-text">Bilibili-Evolved</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.1.2/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>
